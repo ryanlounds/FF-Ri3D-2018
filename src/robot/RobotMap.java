@@ -52,7 +52,7 @@ public class RobotMap {
 		
 		switch (RobotConst.robot) {
 
-		case 1310:
+		case 1337:
 			LEFT_DRIVE_MOTOR_CAN_ADDRESS          = 0;  // TALON_SRX
 			RIGHT_DRIVE_MOTOR_CAN_ADDRESS         = 1;  // TALON_SRX
 
@@ -60,7 +60,7 @@ public class RobotMap {
 			RIGHT_DRIVE_FOLLOWER_CAN_ADDRESS      = 3;  // VICTOR_SPX
 			break;
 
-		case 1311:
+		case 1339:
 			LEFT_DRIVE_MOTOR_CAN_ADDRESS          = 1;  // TALON_SRX
 			RIGHT_DRIVE_MOTOR_CAN_ADDRESS         = 0;  // TALON_SRX
 

@@ -4,8 +4,8 @@ public class RobotConst {
 	
 	// The TorontoCodingCollective framework was developed to run on different
 	// robots.
-	// Supported robots are 1311 and 1321.
-	public static int robot = 1310;
+	// Supported robots are 1337 and 1338.
+	public static int robot = 1337;
 
 	
 	public static final boolean INVERTED = true;
@@ -56,9 +56,7 @@ public class RobotConst {
 	static {
 		
 		switch (robot) {
-
-		case 1311:
-		case 1310:
+		case 1337:
 			RIGHT_MOTOR_ORIENTATION = INVERTED;
 			LEFT_MOTOR_ORIENTATION = NOT_INVERTED;
 			
@@ -81,7 +79,7 @@ public class RobotConst {
 			INTAKE_TILT_COUNTS_PER_DEGREE = 438;
 			break;
 			
-		case 1321:
+		case 1338:
 		default:
 			RIGHT_MOTOR_ORIENTATION = NOT_INVERTED;
 			LEFT_MOTOR_ORIENTATION = INVERTED;
