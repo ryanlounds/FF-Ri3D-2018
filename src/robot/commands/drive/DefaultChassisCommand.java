@@ -3,10 +3,13 @@ package robot.commands.drive;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import robot.Robot;
+import robot.commands.drive.DriveDirectionCommand;
+import robot.subsystems.ChassisSubsystem;
 
 /**
  *
  */
+@SuppressWarnings("unused")
 public class DefaultChassisCommand extends Command {
 
 	public DefaultChassisCommand() {
@@ -22,6 +25,14 @@ public class DefaultChassisCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
+
+
+		if (Robot.oi.getTurboOn()) {
+			Robot.chassisSubsystem.enableTurbo();
+		}
+		else {
+			Robot.chassisSubsystem.disableTurbo();
+		}
 
 		if (Robot.oi.reset()){
 			Robot.chassisSubsystem.resetGyroAngle();
@@ -44,7 +55,6 @@ public class DefaultChassisCommand extends Command {
 		/*if (Robot.oi.getForwardThrust()) {
 			Scheduler.getInstance().add(new DriveDistanceCommand(50, Robot.chassisSubsystem.getGryoAngle(), 0.5, 5.0, true));
 		}
-
 		if (Robot.oi.getStartDriveDirection()) {
 			Scheduler.getInstance().add(new DriveDirectionCommand(0, .8, 10));
 		}
@@ -101,6 +111,15 @@ public class DefaultChassisCommand extends Command {
 		}
 		//System.out.println(speed);
 		//System.out.println(turn);
+
+		// automatic high gear
+		if (Robot.oi.getTurboOn()) {
+				Robot.chassisSubsystem.enableTurbo();
+
+		}
+		else {
+			Robot.chassisSubsystem.disableTurbo(); 
+		}
 
 
 		Robot.chassisSubsystem.setSpeed(leftSpeed, rightSpeed);

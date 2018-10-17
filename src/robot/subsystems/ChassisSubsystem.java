@@ -85,6 +85,7 @@ public class ChassisSubsystem extends TGryoDriveSubsystem {
 	//	updateSpeed();
 	}
 	
+	@SuppressWarnings("unused")
 	private void updateSpeed() {
 		
 		// If the PIDs are enabled, then bypass the soft drive code
@@ -144,14 +145,14 @@ public class ChassisSubsystem extends TGryoDriveSubsystem {
 	// ********************************************************************************************************************
 	public void enableTurbo() {
 		turboEnabled = true;
-		//System.out.println("Turbo enabled");
+		System.out.println("High Gear");
 		setMaxEncoderSpeed(RobotConst.MAX_HIGH_GEAR_SPEED);
 		shifter.set(HIGH_GEAR);
 	}
 
 	public void disableTurbo() {
 		turboEnabled = false;
-		//System.out.println("Turbo disabled");
+		System.out.println("Low Gear");
 		setMaxEncoderSpeed(RobotConst.MAX_LOW_GEAR_SPEED);
 		shifter.set(LOW_GEAR);
 	}

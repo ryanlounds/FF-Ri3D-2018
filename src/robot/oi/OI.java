@@ -118,9 +118,9 @@ public class OI {
 		return driverController.getPOV();
 	}
 
-//	public boolean getTurboOn() {
-//		return driverController.getButton(TButton.LEFT_BUMPER);
-//	}
+	public boolean getTurboOn() {
+		return driverController.getButton(TButton.LEFT_BUMPER);
+	}
 
 	public boolean getCompressorEnabled() {
 		return pneumaticsToggle.get();
