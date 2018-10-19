@@ -119,7 +119,7 @@ public class OI {
 	}
 
 	public boolean getTurboOn() {
-		return driverController.getButton(TButton.LEFT_BUMPER);
+		return driverController.getButton(TButton.RIGHT_BUMPER);
 	}
 
 	public boolean getCompressorEnabled() {

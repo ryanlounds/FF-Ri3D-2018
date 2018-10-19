@@ -66,7 +66,7 @@ public class DefaultChassisCommand extends Command {
 		}*/
 
 		double speed = Robot.oi.getSpeed();		
-		double turn  = Robot.oi.getTurn();
+		double turn  = -Robot.oi.getTurn();
 
 		// Reduce the scale of the speed and turn at low 
 		// values of the joystick
